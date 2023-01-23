@@ -14,7 +14,7 @@ class Tsubame extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const TweetLikePage(title: 'Flutter Demo Home Page'),
+      home: const TweetLikePage(title: 'Tsubame Editor'),
     );
   }
 }
@@ -39,28 +39,29 @@ class _TweetLikePageState extends State<TweetLikePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
-      ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            const Text(
-              'You have pushed the button this many times:',
-            ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headline4,
-            ),
-          ],
+        appBar: AppBar(
+          title: Text(widget.title),
         ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
-    );
+        body: Container(
+          decoration:
+              BoxDecoration(border: Border.all(color: Colors.red, width: 2.0)),
+          child: Column(
+            children: <Widget>[
+              Expanded(
+                child: Container(
+                  decoration: BoxDecoration(
+                      border: Border.all(color: Colors.blue, width: 2.0)),
+                  child: Text('memo'),
+                ),
+              ),
+              Container(
+                  decoration: BoxDecoration(
+                      border: Border.all(color: Colors.yellow, width: 2.0)),
+                  child: Row(
+                    children: [Expanded(child: Text("editor"))],
+                  )),
+            ],
+          ),
+        ));
   }
 }
