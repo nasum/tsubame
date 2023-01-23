@@ -58,7 +58,13 @@ class _TweetLikePageState extends State<TweetLikePage> {
                   decoration: BoxDecoration(
                       border: Border.all(color: Colors.yellow, width: 2.0)),
                   child: Row(
-                    children: [Expanded(child: Text("editor"))],
+                    children: <Widget>[
+                      Expanded(
+                          child: TextFormField(
+                        autofocus: true,
+                      )),
+                      ElevatedButton(onPressed: () {}, child: Text("send"))
+                    ],
                   )),
             ],
           ),
