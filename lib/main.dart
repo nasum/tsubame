@@ -51,7 +51,13 @@ class _TweetLikePageState extends State<TweetLikePage> {
                 child: Container(
                   decoration: BoxDecoration(
                       border: Border.all(color: Colors.blue, width: 2.0)),
-                  child: Text('memo'),
+                  child: Row(children: [
+                    Expanded(
+                        child: Column(children: [
+                      Text('memo'),
+                      Text('memo2'),
+                    ]))
+                  ]),
                 ),
               ),
               Container(
