@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import './form.dart';
 
 void main() {
   runApp(const Tsubame());
@@ -60,18 +61,7 @@ class _TweetLikePageState extends State<TweetLikePage> {
                   ]),
                 ),
               ),
-              Container(
-                  decoration: BoxDecoration(
-                      border: Border.all(color: Colors.yellow, width: 2.0)),
-                  child: Row(
-                    children: <Widget>[
-                      Expanded(
-                          child: TextFormField(
-                        autofocus: true,
-                      )),
-                      ElevatedButton(onPressed: () {}, child: Text("send"))
-                    ],
-                  )),
+              TweetLikeForm()
             ],
           ),
         ));
