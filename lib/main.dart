@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import './form.dart';
+import './memo.dart';
 
 void main() {
   runApp(const Tsubame());
@@ -44,19 +45,15 @@ class _TweetLikePageState extends State<TweetLikePage> {
           title: Text(widget.title),
         ),
         body: Container(
-          decoration:
-              BoxDecoration(border: Border.all(color: Colors.red, width: 2.0)),
           child: Column(
             children: <Widget>[
               Expanded(
                 child: Container(
-                  decoration: BoxDecoration(
-                      border: Border.all(color: Colors.blue, width: 2.0)),
                   child: Row(children: [
                     Expanded(
                         child: Column(children: [
-                      Text('memo'),
-                      Text('memo2'),
+                      TweetLikeMemo('memo'),
+                      TweetLikeMemo('memo2'),
                     ]))
                   ]),
                 ),
